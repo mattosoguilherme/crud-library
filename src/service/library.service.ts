@@ -16,9 +16,7 @@ class LibraryService {
   }
 
   public async findUnique(id: string) {
-    return await Book.findById(id).catch((e) => {
-      console.log(e);
-    });
+    return await Book.findById(id);
   }
 
   public async findMany() {
