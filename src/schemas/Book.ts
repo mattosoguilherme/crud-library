@@ -1,12 +1,15 @@
-import {Document, Schema, Model, model} from 'mongoose'
+import { Schema, model } from "mongoose";
 
-
-const BookSchema = new Schema ({
+const BookSchema = new Schema(
+  {
     title: String,
     publishing_company: String,
     authors: Array,
-},{
-    timestamps:true
-})
+    cover: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
-export default model('Book',BookSchema)
+export default model("Books", BookSchema);
